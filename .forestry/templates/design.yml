@@ -1,0 +1,86 @@
+---
+label: Design
+hide_body: true
+fields:
+- name: construction
+  type: field_group
+  config: {}
+  fields:
+  - name: enable_coming_soon
+    type: boolean
+    label: Enable Coming Soon
+  label: Under Construction Page
+- name: logo_and_title
+  type: field_group
+  config: {}
+  fields:
+  - name: logo
+    type: file
+    config:
+      maxSize: 64
+    label: Logo
+  - name: company_title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: favicon
+    type: file
+    config:
+      maxSize: 64
+    label: Favicon
+  label: Logo and Title
+- name: home_slideshow
+  type: field_group
+  config: {}
+  fields:
+  - name: slideshow
+    type: image_gallery
+    config: {}
+    label: Slideshow
+  - name: slideshow_title
+    type: text
+    config:
+      required: false
+    label: Slideshow Title
+  - name: slideshow_subtitle
+    type: text
+    config:
+      required: false
+    label: Slideshow Subtitle
+  label: Home Slideshow
+- name: banner
+  type: field_group
+  config: {}
+  fields:
+  - name: banner_image
+    type: file
+    config:
+      maxSize: 64
+    label: Banner Image
+  label: Banner
+- name: footer
+  type: field_group
+  config: {}
+  fields:
+  - name: footer_background_color
+    type: color
+    config:
+      required: false
+      color_format: Hex
+    label: Footer Background Color
+  - name: enable_black_text
+    type: boolean
+    label: Enable Black Text
+  - name: footer_bio
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Footer Bio
+  label: Footer
+pages:
+- data/design.yaml
