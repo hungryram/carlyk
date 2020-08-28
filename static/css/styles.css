@@ -6,6 +6,27 @@ html {
     -moz-scroll-behavior: smooth;
 }
 
+a.primary-btn {
+    background: #464646;
+    color: #fff;
+    padding: 20px 30px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    transition: .3s;
+
+}
+
+a.primary-btn:hover {
+    color: #fff;
+    box-shadow: 0 2px 12px #666666;
+    transition: .3s;
+}
+
+div.container.is-fluid {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 div.section {
     padding: 3rem 2rem;
 }
@@ -16,9 +37,10 @@ main {
 }
 
 body p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Mulish', sans-serif;
     line-height: 2;
     font-weight: 100;
+    font-size: 18px;
 }
 
 div.content a {
@@ -35,7 +57,7 @@ body h3.title,
 body h4.title,
 body h5.title,
 body h6.title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Sorts Mill Goudy', serif;
     font-weight: 500;
  }
 
@@ -46,10 +68,6 @@ body h4.subtitle,
 body h5.subtitle,
 body h6.subtitle {
     font-family: 'Raleway', sans-serif;
-    color: #C69C6D;
-}
-
-div.page-title h1 span {
     color: #C69C6D;
 }
 
@@ -75,19 +93,45 @@ textarea.textarea::placeholder {
     font-size: 14px;
 }
 
+/* SLICK CAROUSEL */
+
+
+button.slick-prev.slick-arrow {
+    position: absolute;
+    z-index: 100;
+    bottom: 40px;
+    right: 10%;
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+button.slick-next.slick-arrow {
+    position: absolute;
+    right: 5%;
+    bottom: 40px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+
+}
+
+/* HERO */
+
 .hero-body.slide-content {
     display: flex;
     align-items: center;
     padding-bottom: 0;
-}
-
-a.hero-button {
-    color: #fff;
-    display: inline-block;
-    position: relative;
-    left: 100px;
-    color: #fff;
-    transition: width .3s ease;
 }
 
 a.hero-button:hover {
@@ -95,30 +139,25 @@ a.hero-button:hover {
     transition: width .3s ease;
 }
 
-a.hero-button:before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    top: 12px;
-    height: 4px;
-    background: #fff;
-    left: -95px;
-    transition: width .2s ease;
-}
-
-a.hero-button:hover:before {
-    width: 80px;
-    transition: width .2s ease;
-}
-
-
 section.hero.slick-slide {
     display: flex;
 }
 
-.hero-foot p {
-    color: #a9a9a9;
-    font-size: 13px;
+h1.title.hero-title {
+    font-size: 5rem;
+}
+
+.section.hero-foot:after {
+    content: "";
+    position: absolute;
+    bottom: -75px;
+    width: 1px;
+    height: 150px;
+    background: rgba(151, 151, 151, .7);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    
 }
 
   /** Hero Text Animation **/
@@ -269,4 +308,27 @@ a.navbar-link:hover {
     .navbar-dropdown.is-active {
         display: block;
     }
+}
+
+
+/* ABOUT HOME PAGE */
+
+div.line {
+    width: 1px;
+    height: 50px;
+    background: rgb(139 139 139 / 35%);
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+div.about__container {
+    padding-top: 6rem;
+}
+
+h1.main-title {
+    line-height: 70px;
+}
+
+h1.main-title span {
+    color: #5497df;
 }

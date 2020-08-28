@@ -2,18 +2,17 @@
 
 <div class="home-slide">
 {{ range .Site.Data.design.home_slideshow.slideshow }}
-<section class="hero lax" style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url({{ .image }});height:100vh;background-size:cover;background-position:center" data-lax-bg-pos-y="0 0, vh 200 500">
+<section class="hero lax" style="background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url({{ .image }});height:100vh;background-size:cover;background-position:center" data-lax-bg-pos-y="0 0, vh 200 500">
   <!-- Hero head: will stick at the top -->
 
 
   <!-- Hero content: will be in the middle -->
   <div class="hero-body slide-content">
-    <div class="container has-text-left">
+    <div class="container is-fluid has-text-centered">
       <div class="columns">
-        <div class="column is-half has-text-white">
-          <h1 class="title is-1 has-text-white">{{ .heading }}</h1>
-          {{ if .link }}<a href="{{ .link }}" class="hero-button">{{ .link_text }}</a>{{ end }}
-          <p class="mt-6">{{ .hero_body }}</p>
+        <div class="column is-half has-text-white is-offset-one-quarter">
+          <h1 class="title is-1 has-text-white hero-title is-uppercase">{{ .heading }}</h1>
+          {{ if .link }}<a href="{{ .link }}" class="hero-button has-text-white">{{ .link_text }}</a>{{ end }}
         </div>
       </div>
     </div>
@@ -21,11 +20,13 @@
 
   <!-- Hero footer: will stick at the bottom -->
   <div class="section hero-foot">
-    <div class="container">
+    <div class="container is-fluid">
       <div class="columns has-text-left has-text-white is-mobile is-vcentered">
-        <div class="column quicksearch">
-          <script type="text/javascript" src="https://www.idxhome.com/site/listing/search/widget/133408?style=horizontal"></script>
-          <p>Or use our <a href="http://www.idxhome.com/listing/search/advanced/133408">advanced search feature</a></p>
+        <div class="column is-half">
+          <ul>
+              <li class="is-inline mr-3"><a href="/" class="has-text-white">Houezez.</a></li>
+              <li class="is-inline mr-3"><a href="/" class="has-text-white">Facebook.</a></li>
+          </ul>
         </div>
       </div>
       </div>
