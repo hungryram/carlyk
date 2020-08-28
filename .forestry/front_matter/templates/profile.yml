@@ -168,3 +168,5 @@ fields:
         format: markdown
     label: Meta Description
   label: Search Engine Optimization
+pages:
+- data/profile.yaml
