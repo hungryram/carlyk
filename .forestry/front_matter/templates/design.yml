@@ -2,14 +2,6 @@
 label: Design
 hide_body: true
 fields:
-- name: construction
-  type: field_group
-  config: {}
-  fields:
-  - name: enable_coming_soon
-    type: boolean
-    label: Enable Coming Soon
-  label: Under Construction Page
 - name: logo_and_title
   type: field_group
   config: {}
@@ -17,61 +9,150 @@ fields:
   - name: logo
     type: file
     config:
-      maxSize: 64
+      maxSize: 2
     label: Logo
-  - name: company_title
+  - name: site_title
     type: text
     config:
       required: false
-    label: Title
+    label: Site Title
   - name: favicon
     type: file
     config:
-      maxSize: 64
+      maxSize: 1
     label: Favicon
   label: Logo and Title
+- name: colors
+  type: field_group
+  config: {}
+  fields:
+  - name: primary_color
+    type: color
+    config:
+      required: false
+      color_format: Hex
+    label: Primary Color
+  - name: button_background_color
+    type: color
+    label: Button Background Color
+    config:
+      required: false
+      color_format: Hex
+  label: Colors
 - name: home_slideshow
   type: field_group
   config: {}
   fields:
   - name: slideshow
-    type: image_gallery
-    config: {}
+    type: field_group_list
+    fields:
+    - name: subtitle
+      type: text
+      config:
+        required: false
+      label: Subtitle
+    - name: heading
+      type: text
+      config:
+        required: false
+      label: Heading
+    - name: image
+      type: file
+      config:
+        maxSize: 2
+      label: Image
+    - name: link_text
+      type: text
+      config:
+        required: false
+      label: Link Text
+    - name: link
+      type: text
+      config:
+        required: false
+      label: Link
+    config:
+      min: 
+      max: 
+      labelField: 
     label: Slideshow
-  - name: slideshow_title
-    type: text
-    config:
-      required: false
-    label: Slideshow Title
-  - name: slideshow_subtitle
-    type: text
-    config:
-      required: false
-    label: Slideshow Subtitle
+  - name: footer_hero_text
+    type: field_group
+    config: {}
+    fields:
+    - name: column_one
+      type: field_group
+      config: {}
+      fields:
+      - name: heading
+        type: text
+        config:
+          required: false
+          max: 20
+        label: Heading
+      - name: body
+        type: textarea
+        default: ''
+        config:
+          required: false
+          wysiwyg: false
+          schema:
+            format: markdown
+          max: 60
+        label: Body
+      label: Column One
+    - name: column_two
+      type: field_group
+      config: {}
+      fields:
+      - name: heading
+        type: text
+        config:
+          required: false
+          max: 20
+        label: Heading
+      - name: body
+        type: textarea
+        default: ''
+        config:
+          required: false
+          wysiwyg: false
+          schema:
+            format: markdown
+          max: 50
+        label: Body
+      label: Column Two
+    label: Footer Hero Text
   label: Home Slideshow
 - name: banner
   type: field_group
   config: {}
   fields:
-  - name: banner_image
+  - name: image
     type: file
     config:
-      maxSize: 64
-    label: Banner Image
-  label: Banner
+      maxSize: 2
+    label: Sub Page Image
+  - name: contact_page_image
+    type: file
+    config:
+      maxSize: 2
+    label: Contact Page Image
+  label: Page Banner
 - name: footer
   type: field_group
   config: {}
   fields:
-  - name: footer_background_color
-    type: color
+  - name: background_image
+    type: file
     config:
-      required: false
-      color_format: Hex
-    label: Footer Background Color
-  - name: enable_black_text
-    type: boolean
-    label: Enable Black Text
+      maxSize: 64
+    label: Background Image
+  - name: footer_logo
+    type: file
+    config:
+      maxSize: 2
+    label: Footer Logo
   - name: footer_bio
     type: textarea
     default: ''
