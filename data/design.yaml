@@ -8,6 +8,10 @@ colors:
   button_background_color: ''
 home_slideshow:
   slideshow:
+  - heading: ''
+    image: "/uploads/jared-rice-pibrawhb4h8-unsplash.jpg"
+    link_text: ''
+    link: ''
   - image: "/uploads/francesca-tosolini-gu4r-0lwxvk-unsplash.jpg"
     link_text: View Portfolio
     link: "/portfolio"
