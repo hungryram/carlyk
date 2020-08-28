@@ -148,6 +148,11 @@ fields:
     config:
       required: false
     label: Pinterest
+  - name: houzez
+    type: text
+    config:
+      required: false
+    label: Houzez
   label: Social Accounts
 - name: search_engine_optimization
   type: field_group
