@@ -5,6 +5,10 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: document
+  path: data/profile.yaml
+  label: Profile
+  match: "**/*"
+- type: document
   path: data/design.yaml
   label: Designs
 - type: directory
