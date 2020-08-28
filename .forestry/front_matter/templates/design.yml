@@ -46,11 +46,6 @@ fields:
   - name: slideshow
     type: field_group_list
     fields:
-    - name: subtitle
-      type: text
-      config:
-        required: false
-      label: Subtitle
     - name: heading
       type: text
       config:
