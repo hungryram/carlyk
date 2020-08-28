@@ -28,5 +28,6 @@ banner:
   contact_page_image: ''
 footer:
   background_image: ''
-  footer_logo: ''
-  footer_bio: ''
+  footer_logo: "/uploads/ck-designswhite.png"
+  footer_bio: CK Designs Kitchen & Bath is a in home design and remodeling service
+    for homeowners who are planning a Kitchen or Bathroom remodel project.
