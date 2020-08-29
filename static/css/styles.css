@@ -6,6 +6,10 @@ html {
     -moz-scroll-behavior: smooth;
 }
 
+body {
+    overflow: hidden;
+}
+
 a.primary-btn {
     background: transparent;
     color: #666666;
@@ -126,7 +130,7 @@ button.slick-prev.slick-arrow {
     box-shadow: none;
     border: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     appearance: none;
     -webkit-appearance: none;
     outline: none;
@@ -140,7 +144,7 @@ button.slick-next.slick-arrow {
     box-shadow: none;
     border: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     appearance: none;
     -webkit-appearance: none;
     outline: none;
@@ -267,8 +271,8 @@ span.navbar-burger {
 nav.navbar {
     background: transparent;
     border-bottom: 1px solid rgb(224 224 224 / 26%);
-    padding-top: 30px;
-    padding-bottom: 30px;}
+    padding-top: 15px;
+    padding-bottom: 15px;}
 
 a.navbar-item img {
     max-height: none;
@@ -368,8 +372,10 @@ div.about__container {
     padding-top: 6rem;
 }
 
-h1.main-title {
-    line-height: 70px;
+@media screen and (min-width: 768px){
+    h1.main-title {
+        line-height: 70px;
+    }
 }
 
 h1.main-title span {
@@ -473,6 +479,7 @@ div.panel__container a {
     .half-triangle {
         border-bottom: 200px solid rgb(84 151 223 / 21%);
         border-left: 200px solid transparent;
+        right: 0px;
     }
 }
 
