@@ -2,22 +2,18 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
-name = "Contact"
-url = "/contact"
-weight = 5
+name = "Fixtures, Lighting, and Appliances"
+parent = "Design & Remodeling Services"
+url = "/plumbing-fixtures-appliances-lighting/"
+weight = 1
 [[menu.main]]
-name = "Blog"
-url = "/blog"
-weight = 4
-[[menu.main]]
-name = "Team"
-url = "/team"
+name = "Design & Remodeling Services"
 weight = 3
-[[menu.main]]
-name = "Listings"
-url = "/listings"
-weight = 2
 [[menu.main]]
 name = "Home"
 url = "/"
 weight = 1
+[[menu.main]]
+name = "Contact"
+url = "/contact"
+weight = 2
