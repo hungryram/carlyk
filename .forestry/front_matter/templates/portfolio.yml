@@ -10,4 +10,5 @@ fields:
   config: {}
   label: Portfolio
 pages:
+- content/bathroom-remodels/_index.md
 - content/kitchen-remodels/_index.md
