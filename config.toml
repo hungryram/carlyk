@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://ckdesigns.netlify.app/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
