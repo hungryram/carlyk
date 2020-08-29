@@ -2,6 +2,11 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
+name = "Tile, Backsplash, and Flooring"
+parent = "Design & Remodeling Services"
+url = "/tile-backsplash-showers-flooring/"
+weight = 2
+[[menu.main]]
 name = "Fixtures, Lighting, and Appliances"
 parent = "Design & Remodeling Services"
 url = "/plumbing-fixtures-appliances-lighting/"
