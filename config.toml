@@ -2,6 +2,11 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
+name = "Flooring"
+parent = "Design & Remodeling Services"
+url = "/flooring"
+weight = 4
+[[menu.main]]
 name = "Cabinets, Countertops, Hardware"
 parent = "Design & Remodeling Services"
 url = "/cabinets-countertops-hardware/"
