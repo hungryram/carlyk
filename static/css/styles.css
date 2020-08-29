@@ -7,9 +7,10 @@ html {
 }
 
 a.primary-btn {
-    background: #464646;
-    color: #fff;
-    padding: 20px 30px;
+    background: transparent;
+    color: #666666;
+    border: 1px solid black;
+    padding: 15px 70px;
     font-family: 'Mulish', sans-serif;
     font-size: 18px;
     transition: .3s;
@@ -18,13 +19,17 @@ a.primary-btn {
 
 a.primary-btn:hover {
     color: #fff;
-    box-shadow: 0 2px 12px #666666;
+    background: black;
     transition: .3s;
 }
 
 div.container.is-fluid {
     padding-left: 5%;
     padding-right: 5%;
+}
+
+div.big-section {
+    padding: 10rem 2rem;
 }
 
 div.section {
@@ -37,10 +42,14 @@ main {
 }
 
 body p {
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Mulish', "Times", Arial, sans-serif;
     line-height: 2;
     font-weight: 100;
     font-size: 18px;
+}
+
+body strong {
+    font-family: 'Mulish', "Times", Arial, sans-serif;
 }
 
 div.content a {
@@ -59,6 +68,7 @@ body h5.title,
 body h6.title {
     font-family: 'Sorts Mill Goudy', serif;
     font-weight: 500;
+    color: #000;
  }
 
 body h1.subtitle,
@@ -77,19 +87,30 @@ textarea.textarea {
     background: transparent;
     border-radius: 0;
     color: #fff;
+    height: 50px;
 }
 
 button.button {
-    background: #C69C6D;
+    background: transparent;
     width: 100%;
     border-radius: 0;
-    border: 0;
+    border: 1px solid black;
+    color: #000;
+    padding: 30px 50px;
+    appearance: none;
+    -webkit-appearance:none;
+    transition: all .2s ease;
+}
+
+button.button:hover {
+    background: #000;
     color: #fff;
+    transition: all .2s ease;
 }
 
 input.input::placeholder,
 textarea.textarea::placeholder {
-    color: #fff;
+    color: #000;
     font-size: 14px;
 }
 
@@ -123,7 +144,19 @@ button.slick-next.slick-arrow {
     appearance: none;
     -webkit-appearance: none;
     outline: none;
+    z-index: 100;
 
+}
+
+div.home-slide:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 18%;
+    height: 120px;
+    background: rgb(0 0 0 / 70%);
+    z-index: 1;
 }
 
 /* HERO */
@@ -227,7 +260,9 @@ span.navbar-burger {
 
 nav.navbar {
     background: transparent;
-}
+    border-bottom: 1px solid rgb(224 224 224 / 26%);
+    padding-top: 30px;
+    padding-bottom: 30px;}
 
 a.navbar-item img {
     max-height: none;
@@ -332,3 +367,135 @@ h1.main-title {
 h1.main-title span {
     color: #5497df;
 }
+
+/* HOME PANELS */
+
+div.panel__container {
+    padding-top: 200px;
+}
+
+div.panel-inner-one,
+div.panel-inner-two,
+div.panel-inner-three {
+    height: 70rem;
+}
+
+div.panel__container a {
+    color: #fff;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+}
+
+
+.panel-inner-one {
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("/uploads/kitchen.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.panel-inner-one:hover a{
+    background:rgb(0 0 0 / 71%);
+    transition: all .3s ease-in-out;
+}
+
+.panel-inner-two {
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("/uploads/bath.jpg") no-repeat center;
+    background-size:cover;
+    position: relative;
+}
+
+.panel-inner-two:hover a{
+    background:rgb(0 0 0 / 71%);
+    transition: all .3s ease-in-out;
+}
+
+.panel-inner-three {
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("/uploads/kitchen2.jpg") no-repeat center;
+    background-size:cover;
+    position: relative;
+}
+
+.panel-inner-three:hover a{
+    background:rgb(0 0 0 / 71%);
+    transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width:768px){
+div.panel-inner-one,
+div.panel-inner-two,
+div.panel-inner-three {
+    height: 20rem;
+}
+
+div.panel__container a {
+    font-size: 2rem;
+}
+}
+
+/* FEATURED */
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    z-index: 4;
+    position: relative;
+}
+
+.half-triangle {
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: -180px;
+    height: 0;
+    border-bottom: 400px solid rgb(84 151 223 / 21%);
+    border-left: 400px solid transparent;
+    right: -50px;
+    z-index: 1;
+  }
+
+/* CLOSING  */
+
+.text-bg:after {
+    content: "CONTACT";
+    position: absolute;
+    font-size: 10em;
+    color:rgb(246 246 246 / 51%);
+    z-index: -1;
+    font-family: 'Sorts Mill Goudy', serif;
+
+}
+
+/* FOOTER */
+
+ footer.footer {
+     background: #1A1A1A;
+     position: relative;
+ }
+
+ footer.footer:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 150px;
+    background: rgba(151, 151, 151, .7);
+    margin: 0 auto;
+    left: 0;
+    top: -75px;
+    right: 0;
+ }
+
+ footer.footer p {
+     color: #666;
+ }
+
+ .footer-credit a {
+     color: #fff;
+ }

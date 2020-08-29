@@ -30,5 +30,5 @@ url = "/"
 weight = 1
 [[menu.main]]
 name = "Contact"
-url = "/contact"
+url = "/contact-information"
 weight = 2

@@ -1,3 +1,15 @@
+// INITIALIZE LAX
+window.onload = function() {
+	lax.setup() // init
+
+	const updateLax = () => {
+		lax.update(window.scrollY)
+		window.requestAnimationFrame(updateLax)
+	}
+
+	window.requestAnimationFrame(updateLax)
+}
+
 // SLIDE HOME
 jQuery(document).ready(function ($) {
     $('.home-slide').slick({

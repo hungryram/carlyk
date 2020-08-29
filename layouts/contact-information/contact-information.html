@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="big-section">
+    <div class="contact-bg" style="background:url(/uploads/bathtub.jpg) no-repeat center;height: 50vh;margin-bottom:100px;">
+    </div>
+    <div class="container is-fluid">
+        <div class="columns is-variable is-8">
+            <div class="column">
+                <h2 class="title is-4">Send a quick message</h2>
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input name="bot-field" type="hidden"/>
+                    <div class="field is-horizontal">
+                      <div class="field-body">
+                        <div class="field">
+                          <p class="control is-expanded">
+                            <input class="input" type="text" placeholder="First Name" name="first name">
+                          </p>
+                        </div>
+                        <div class="field">
+                          <p class="control">
+                            <input class="input" type="text" placeholder="Last Name" name="last name">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div class="field">
+                      <div class="control">
+                        <input class="input" type="email" placeholder="Email" name="email address">
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="control">
+                        <textarea class="textarea" placeholder="Your Message" name="message"></textarea>
+                      </div>
+                    </div>
+                    <div class="control">
+                      <button class="button">Submit</button>
+                    </div>
+                  </form>
+            </div>
+            <div class="column">
+                <h1 class="title is-1">Get in Touch</h1>
+                <p>Home Remodeling in Fayetteville, GA & Surrounding Areas</p>
+                <div class="columns pt-6 has-text-left">
+                    <div class="column is-4">
+                        <h4 class="title is-6 is-uppercase">Phone</h4>
+                        <p><a href="tel:{{ .Site.Data.profile.primary_contact.phone }}">{{ .Site.Data.profile.primary_contact.phone }}</a></p>
+                    </div>
+                    <div class="column">
+                        <h4 class="title is-6 is-uppercase">Email</h4>
+                        <p><a href="mailto:{{ .Site.Data.profile.primary_contact.email }}">{{ .Site.Data.profile.primary_contact.email }}</a></p>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        {{ $contactSocial := .Site.Data.profile.social_accounts }}
+        
+                        <ul>
+                            {{ if $contactSocial.facebook }}<li class="is-inline mr-2"><a href="{{ $contactSocial.facebook }}" target="_blank" class="has-text-black">Facebook.</a></li>{{ end }}
+                            {{ if $contactSocial.instagram }}<li class="is-inline mr-2"><a href="{{ $contactSocial.instagram }}" target="_blank" class="has-text-black">Instagram.</a></li>{{ end }}
+                            {{ if $contactSocial.instagram }}<li class="is-inline mr-2"><a href="{{ $contactSocial.houzez }}" target="_blank" class="has-text-black">Houzez.</a></li>{{ end }}
+                            {{ if $contactSocial.twitter }}<li class="is-inline mr-2"><a href="{{ $contactSocial.twitter }}" target="_blank" class="has-text-black">Twitter.</a></li>{{ end }}
+                            {{ if $contactSocial.pinterest }}<li class="is-inline mr-2"><a href="{{ $contactSocial.pinterest }}" target="_blank" class="has-text-black">Pinterest.</a></li>{{ end }}
+                            {{ if $contactSocial.youtube }}<li class="is-inline mr-2"><a href="{{ $contactSocial.youtube }}" target="_blank" class="has-text-black">Youtube.</a></li>{{ end }}
+                            {{ if $contactSocial.linkedin }}<li class="is-inline mr-2"><a href="{{ $contactSocial.linkedin }}" target="_blank" class="has-text-black">Linkedin.</a></li>{{ end }}
+                            {{ if $contactSocial.yelp }}<li class="is-inline mr-2"><a href="{{ $contactSocial.yelp }}" target="_blank" class="has-text-black"0.>Yelp.</a></li>{{ end }}
+                          </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
