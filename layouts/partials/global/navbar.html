@@ -15,9 +15,9 @@
             {{ end }}
           </a>
           <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span {{ if $.IsHome }}style="color:#fff;"{{ else }}style="color:#000"{{ end }}></span>
+            <span {{ if $.IsHome }}style="color:#fff;"{{ else }}style="color:#000"{{ end }}></span>
+            <span {{ if $.IsHome }}style="color:#fff;"{{ else }}style="color:#000"{{ end }}></span>
           </span>
         </div>
         <div id="navbarMenuHeroA" class="navbar-menu">
