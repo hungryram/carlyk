@@ -9,3 +9,5 @@ fields:
   type: image_gallery
   config: {}
   label: Portfolio
+pages:
+- content/kitchen-remodels/_index.md
