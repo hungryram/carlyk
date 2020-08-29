@@ -21,7 +21,6 @@ sections:
 - type: document
   path: content/bathroom-remodels/_index.md
   label: Bathroom Portfolio
-  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
