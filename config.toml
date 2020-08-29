@@ -22,13 +22,13 @@ parent = "Design & Remodeling Services"
 url = "/plumbing-fixtures-appliances-lighting/"
 weight = 1
 [[menu.main]]
-name = "Design & Remodeling Services"
+name = "Contact"
+url = "/contact-information"
 weight = 3
+[[menu.main]]
+name = "Design & Remodeling Services"
+weight = 2
 [[menu.main]]
 name = "Home"
 url = "/"
 weight = 1
-[[menu.main]]
-name = "Contact"
-url = "/contact-information"
-weight = 2
