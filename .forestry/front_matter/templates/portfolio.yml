@@ -5,3 +5,7 @@ fields:
 - type: text
   name: title
   label: title
+- name: portfolio
+  type: image_gallery
+  config: {}
+  label: Portfolio
