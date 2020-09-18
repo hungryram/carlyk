@@ -10,12 +10,12 @@ home_slideshow:
   slideshow:
   - image: "/uploads/francesca-tosolini-gu4r-0lwxvk-unsplash.jpg"
     link_text: View Portfolio
-    link: "/portfolio"
+    link: "/bathroom-remodels/"
     heading: CK Designs Kitchen & Bath
   - heading: CK Designs Kitchen & Bath
     image: "/uploads/mainimage.jpg"
     link_text: Start a project
-    link: "/contact"
+    link: "/contact-information"
   footer_hero_text:
     column_one:
       heading: ''
