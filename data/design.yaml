@@ -2,7 +2,7 @@
 logo_and_title:
   logo: "/uploads/ck-designswhite.png"
   site_title: CK Designs
-  favicon: ''
+  favicon: "/uploads/favicon.png"
 colors:
   primary_color: ''
   button_background_color: ''
