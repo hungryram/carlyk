@@ -2,14 +2,6 @@ baseURL = "https://www.ckdesignskandb.com/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
-name = "Bathroom Remodels"
-url = "/bathroom-remodels/"
-weight = 4
-[[menu.main]]
-name = "Kitchen Remodels"
-url = "kitchen-remodels/"
-weight = 3
-[[menu.main]]
 name = "Flooring"
 parent = "Design & Remodeling Services"
 url = "/flooring"
@@ -18,17 +10,25 @@ weight = 4
 name = "Cabinets, Countertops, Hardware"
 parent = "Design & Remodeling Services"
 url = "/cabinets-countertops-hardware/"
-weight = 3
+weight = 1
 [[menu.main]]
 name = "Tile, Backsplash, and Flooring"
 parent = "Design & Remodeling Services"
 url = "/tile-backsplash-showers-flooring/"
-weight = 2
+weight = 3
 [[menu.main]]
 name = "Fixtures, Lighting, and Appliances"
 parent = "Design & Remodeling Services"
 url = "/plumbing-fixtures-appliances-lighting/"
-weight = 1
+weight = 2
+[[menu.main]]
+name = "Bathroom Remodels"
+url = "/bathroom-remodels/"
+weight = 4
+[[menu.main]]
+name = "Kitchen Remodels"
+url = "kitchen-remodels/"
+weight = 3
 [[menu.main]]
 name = "Contact"
 url = "/contact-information"
