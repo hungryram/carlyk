@@ -275,8 +275,11 @@ nav.navbar {
     padding-bottom: 15px;}
 
 a.navbar-item img {
-    max-height: none;
-    width: 150px;
+    max-height: 3.75rem;
+}
+
+div.navbar-brand {
+    align-items: center;
 }
 
 a.navbar-item,
