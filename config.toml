@@ -7,12 +7,7 @@ parent = "Design & Remodeling Services"
 url = "/flooring"
 weight = 4
 [[menu.main]]
-name = "Cabinets, Countertops, Hardware"
-parent = "Design & Remodeling Services"
-url = "/cabinets-countertops-hardware/"
-weight = 1
-[[menu.main]]
-name = "Tile, Backsplash, and Flooring"
+name = "Tile and Backsplash"
 parent = "Design & Remodeling Services"
 url = "/tile-backsplash-showers-flooring/"
 weight = 3
@@ -21,6 +16,11 @@ name = "Fixtures, Lighting, and Appliances"
 parent = "Design & Remodeling Services"
 url = "/plumbing-fixtures-appliances-lighting/"
 weight = 2
+[[menu.main]]
+name = "Cabinets, Countertops, Hardware"
+parent = "Design & Remodeling Services"
+url = "/cabinets-countertops-hardware/"
+weight = 1
 [[menu.main]]
 name = "Bathroom Remodels"
 url = "/bathroom-remodels/"
