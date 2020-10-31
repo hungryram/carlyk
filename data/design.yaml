@@ -8,12 +8,12 @@ colors:
   button_background_color: ''
 home_slideshow:
   slideshow:
-  - image: "/uploads/kitchen-background.jpg"
+  - image: "/uploads/bathroom-splash.jpg"
     link_text: View Bathroom Remodels
     link: "/bathroom-remodels/"
     heading: CK Designs Kitchen & Bath
   - heading: CK Designs Kitchen & Bath
-    image: "/uploads/mainimage.jpg"
+    image: "/uploads/kitchen-background.jpg"
     link_text: Start a project
     link: https://live.vcita.com/site/ylhappdjno0mxiey/online-scheduling?action=y21cntkughhrclxk
   footer_hero_text:
