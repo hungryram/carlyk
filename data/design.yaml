@@ -8,7 +8,7 @@ colors:
   button_background_color: ''
 home_slideshow:
   slideshow:
-  - image: "/uploads/bathroom-splash.jpg"
+  - image: "/uploads/bath-1.jpg"
     link_text: View Bathroom Remodels
     link: "/bathroom-remodels/"
     heading: CK Designs Kitchen & Bath
