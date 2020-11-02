@@ -10,20 +10,8 @@ fields:
 - name: featured_image
   type: file
   config:
-    maxSize: 5
+    maxSize: 2
   label: Featured Image
-- name: author
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: pages
-      section: team
-      file: 
-      path: 
-  label: Author
 - name: categories
   type: tag_list
   default: []
