@@ -72,5 +72,3 @@ fields:
     template: seo
     label: SEO
   label: Tile Work
-pages:
-- data/pageconfig.yaml

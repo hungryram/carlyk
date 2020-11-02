@@ -16,9 +16,6 @@ sections:
   create: all
   match: "*"
 - type: document
-  path: data/pageconfig.yaml
-  label: Page SEO
-- type: document
   path: content/kitchen-remodels/_index.md
   label: Kitchen Portfolio
 - type: document
