@@ -45,3 +45,5 @@ fields:
   config: {}
   template: url
   label: URL
+pages:
+- content/blog/test-title.md
