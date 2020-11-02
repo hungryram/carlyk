@@ -5,13 +5,7 @@
             <div class="column content is-three-fifths is-offset-one-fifth">
                 {{ if .Params.date }}<time><small>{{.Date.Format "January 2, 2006" }}</small></time><br>{{ end }}
                 <h1 class="title is-2 page-title has-text-weight-light mt-2">{{ .Title }}</h1>
-                <ul class="categories">
-                    {{ range .Params.categories }}
-                  <li>
-                    <a href="/categories/{{ . | urlize }}" class="mr-3">{{ . }}</a>
-                  </li>
-                  {{ end }}
-                </ul>
+
                 <img src="{{ .Site.Params.cloudinary_url }}{{ .Params.featured_image }}" alt="{{ .Params.alt_tag }}" class="mb-6">
                 {{ .Content }}
                 {{ partial "templates/share" . }}

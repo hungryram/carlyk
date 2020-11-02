@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ $pageCount := len .Site.RegularPages  }}
+{{ if gt $pageCount 0 }}
 <div class="section">
     <div class="container">
         <div class="columns">
@@ -7,14 +9,15 @@
                     {{ $paginator := .Paginate (where .Site.RegularPages.ByDate "Type" "blog") 6 }}
                     {{ range $paginator.Pages.ByWeight }}
                         <div class="column is-4">
-                            <div class="blog-container" style="margin: 10px; height: 100%;">
+                            <div class="blog-container card" style="margin: 10px; height: 100%;">
                                 <a href="{{ .Permalink }}">
                                 <div class="blog-image-container">
                                     <img src="{{ $.Site.Params.cloudinary_url }}{{ .Params.featured_image }}" alt="{{ .Params.alt_tag }}" style="width:100%;height:200px;object-fit:cover">
                               </div>
-                                  <div class="card-content">
-                                    <h1 class="page-title is-5 has-text-black">{{ .Title }}</h2>
-                                    <a href="{{ .Permalink }}" class="readmore">Read More</a>
+                                  <div class="card-content content">
+                                    <h1 class="title is-5 has-text-black">{{ .Title }}</h2>
+                                        <p class="has-text-black">{{ .Summary }}</p>
+                                    <a href="{{ .Permalink }}" class="subtitle is-6">Read More</a>
                                   </div>
                               </a>
                               </div>
@@ -26,4 +29,16 @@
         </div>
     </div>
 </div>
+{{ else }}
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter has-text-centered">
+                <h1 class="title is-2">Blog coming soon!</h1>
+                <p>No blog post has been added. Check back next time for new posts</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
 {{ end }}

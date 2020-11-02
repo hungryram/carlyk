@@ -52,7 +52,8 @@ body p {
     font-size: 14px;
 }
 
-body strong {
+body strong,
+time {
     font-family: 'Mulish', "Times", Arial, sans-serif;
 }
 
