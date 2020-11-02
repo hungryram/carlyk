@@ -257,12 +257,12 @@ h1.title.hero-title {
 
 /* NAVBAR */
 
-div.hero-head {
+/* div.hero-head {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-}
+} */
 
 span.navbar-burger {
     color: #fff;

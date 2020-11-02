@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column content is-three-fifths is-offset-one-fifth">
+                {{ if .Params.date }}<time><small>{{.Date.Format "January 2, 2006" }}</small></time><br>{{ end }}
+                <h1 class="title is-2 page-title has-text-weight-light mt-2">{{ .Title }}</h1>
+                <ul class="categories">
+                    {{ range .Params.categories }}
+                  <li>
+                    <a href="/categories/{{ . | urlize }}" class="mr-3">{{ . }}</a>
+                  </li>
+                  {{ end }}
+                </ul>
+                <img src="{{ .Site.Params.cloudinary_url }}{{ .Params.featured_image }}" alt="{{ .Params.alt_tag }}" class="mb-6">
+                {{ .Content }}
+                {{ partial "templates/share" . }}
+                {{/*  <div class="columns mt-6">
+                    <div class="column">
+                        {{ if .Params.author }}
+                            {{ with .Site.GetPage .Params.author }}
+                            <div class="columns notification">
+                                <div class="column is-4 has-text-centered">
+                                    <img src="{{ .Site.Params.cloudinary_url }}{{ .Params.photo }}" alt="" style="object-fit: cover;height:150px;width:150px;border-radius:50%;margin: 0 auto;">
+                                </div>
+                                <div class="column content">
+                                    <h4 class="subtitle is-4">{{ .Title }}</h4>
+                                    <h6 class="subtitle is-6">{{ .Params.details.title }}</h6>
+                                    <p>{{ .Summary }}</p>
+                                    <br>
+                                    <a href="{{ .Permalink }}" class="primary-btn">View author</a>
+                                </div>
+                            </div>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </div>  */}}
+                {{/*  <div class="columns">
+                    <div class="column pt-6">
+                        <h1 class="title page-title is-5">Leave a Comment</h1>
+                        <div class="fb-comments pt-6" data-href="{{ .Permalink }}" data-numposts="5" data-width="100%"></div>
+                    </div>
+                </div>  */}}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

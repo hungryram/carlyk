@@ -1,6 +1,6 @@
  <!-- Hero head: will stick at the top -->
- <div class="hero-head">
-    <nav class="navbar">
+ <div class="hero-head"{{ if $.IsHome }} style="position:absolute;left:0;right:0;top:0;"{{ end }}>
+    <nav class="navbar is-transparent">
       <div class="container is-fluid">
         <div class="navbar-brand">
           <a class="navbar-item" href="{{ .Site.BaseURL }}">

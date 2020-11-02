@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="columns is-multiline">
+                    {{ $paginator := .Paginate (where .Site.RegularPages.ByDate "Type" "blog") 6 }}
+                    {{ range $paginator.Pages.ByWeight }}
+                        <div class="column is-4">
+                            <div class="blog-container" style="margin: 10px; height: 100%;">
+                                <a href="{{ .Permalink }}">
+                                <div class="blog-image-container">
+                                    <img src="{{ $.Site.Params.cloudinary_url }}{{ .Params.featured_image }}" alt="{{ .Params.alt_tag }}" style="width:100%;height:200px;object-fit:cover">
+                              </div>
+                                  <div class="card-content">
+                                    <h1 class="page-title is-5 has-text-black">{{ .Title }}</h2>
+                                    <a href="{{ .Permalink }}" class="readmore">Read More</a>
+                                  </div>
+                              </a>
+                              </div>
+                        </div>   
+                    {{ end }}
+                    </div>
+                    {{ partial "templates/pagination" . }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
