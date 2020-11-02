@@ -57,3 +57,5 @@ fields:
   config: {}
   template: url
   label: URL
+pages:
+- content/blog/test-blog.md
