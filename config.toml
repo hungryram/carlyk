@@ -2,6 +2,10 @@ baseURL = "https://www.ckdesignskandb.com/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
+name = "Contact"
+url = "/contact-information"
+weight = 6
+[[menu.main]]
 name = "Flooring"
 parent = "Design & Remodeling Services"
 url = "/flooring"
@@ -29,10 +33,6 @@ weight = 4
 name = "Kitchen Remodels"
 url = "kitchen-remodels/"
 weight = 3
-[[menu.main]]
-name = "Contact"
-url = "/contact-information"
-weight = 5
 [[menu.main]]
 name = "Design & Remodeling Services"
 weight = 2
