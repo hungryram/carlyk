@@ -24,6 +24,15 @@ sections:
 - type: document
   path: content/bathroom-remodels/_index.md
   label: Bathroom Portfolio
+- type: heading
+  label: Blog
+- type: directory
+  path: content/blog
+  label: Add Posts
+  create: documents
+  match: "**/*"
+  templates:
+  - blog
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
