@@ -1,92 +1,47 @@
 {{ $seo := .Site.Data.profile.search_engine_optimization }}
+{{ $profile := .Site.Data.profile.company_name }}
 {{ $logo := .Site.Data.design.logo_and_title.logo }}
-{{ $pageConfigSeo := .Site.Data.pageconfig }}
 
+{{ $bodyDesc := .Params.body | truncate 170 }}
 <!-- OPEN GRAPH -->
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ if $.IsHome }}
-    <meta property="og:image" content="{{ $logo | absURL }}" />
-    <meta property="og:title" content="{{ $seo.title_tag }}" />
-    <meta property="og:description" content="{{ $seo.meta_description }}" />
-    <meta property="og:type" content="website" />
-{{ else if eq .RelPermalink "/contact-information/" }}
-    <meta property="og:image" content="{{ $logo | absURL }}" />
-    <meta property="og:title" content="{{ $pageConfigSeo.contact_page.search_engine_optimization.title_tag }}" />
-    <meta property="og:description" content="{{ $pageConfigSeo.contact_page.search_engine_optimization.meta_description }}" />
-    <meta property="og:type" content="website" />
-{{ else if eq .RelPermalink "/blog/" }}
-    <meta property="og:image" content="{{ $logo | absURL }}" />
-    <meta property="og:title" content="{{ $pageConfigSeo.blog_page.search_engine_optimization.title_tag }}" />
-    <meta property="og:description" content="{{ $pageConfigSeo.blog_page.meta_description }}" />
-    <meta property="og:type" content="website" />
-{{ else if eq .RelPermalink "/bathroom-remodels/" }}
-    <meta property="og:image" content="{{ $logo | absURL }}" />
-    <meta property="og:title" content="{{ $pageConfigSeo.bathroom_remodels.search_engine_optimization.title_tag }}" />
-    <meta property="og:description" content="{{ $pageConfigSeo.bathroom_remodels.search_engine_optimization.meta_description }}" />
-    <meta property="og:type" content="website" />
-{{ else if eq .RelPermalink "/cabinets-countertops-hardware/" }}
-    <meta property="og:image" content="{{ $logo | absURL }}" />
-    <meta property="og:title" content="{{ $pageConfigSeo.cabinets.search_engine_optimization.title_tag }}" />
-    <meta property="og:description" content="{{ $pageConfigSeo.cabinets.search_engine_optimization.meta_description }}" />
-    <meta property="og:type" content="website" />
-{{ else if eq .RelPermalink "/plumbing-fixtures-appliances-lighting/" }}
-    <meta property="og:image" content="{{ $logo | absURL }}" />
-    <meta property="og:title" content="{{ $pageConfigSeo.fixtures.search_engine_optimization.title_tag }}" />
-    <meta property="og:description" content="{{ $pageConfigSeo.fixtures.search_engine_optimization.meta_description }}" />
-    <meta property="og:type" content="website" />
-{{ else if eq .RelPermalink "/flooring/" }}
-    <meta property="og:image" content="{{ $logo | absURL }}" />
-    <meta property="og:title" content="{{ $pageConfigSeo.flooring.search_engine_optimization.title_tag }}" />
-    <meta property="og:description" content="{{ $pageConfigSeo.flooring.search_engine_optimization.meta_description }}" />
-    <meta property="og:type" content="website" />
-{{ else if eq .RelPermalink "/kitchen-remodels/" }}
-    <meta property="og:image" content="{{ $logo | absURL }}" />
-    <meta property="og:title" content="{{ $pageConfigSeo.kitchen_remodel.search_engine_optimization.title_tag }}" />
-    <meta property="og:description" content="{{ $pageConfigSeo.kitchen_remodel.search_engine_optimization.meta_description }}" />
-    <meta property="og:type" content="website" />
-{{ else if eq .RelPermalink "/tile-backsplash-showers-flooring/" }}
-    <meta property="og:image" content="{{ $logo | absURL }}" />
-    <meta property="og:title" content="{{ $pageConfigSeo.tile_work.search_engine_optimization.title_tag }}" />
-    <meta property="og:description" content="{{ $pageConfigSeo.tile_work.search_engine_optimization.meta_description }}" />
+<meta property="og:image" content="{{ $logo }}">
+
+{{- if $.IsHome -}}
+    <meta property="og:image" content="{{ $logo | absURL }}"/>
+    <meta property="og:title" content="{{ $seo.title_tag }}"/>
+    <meta property="og:description" content="{{ $seo.meta_description }}"/>
     <meta property="og:type" content="website" />
 {{ else }}
-    <meta property="og:image" content="{{ if .Params.photos.gallery }}{{ index .Params.photos.gallery 0 |absURL }}{{ else }}{{ .Params.featured_image | absURL }}{{ end }}">
-    <meta property="og:title" content="{{ if $.Params.search_engine_optimization.title_tag }}{{ $.Params.search_engine_optimization.title_tag }}{{ end }}" />
-    <meta property="og:description" content="{{ if $.Params.search_engine_optimization.meta_description }}{{ $.Params.search_engine_optimization.meta_description }}{{ end }}" />
-    <meta property="og:type" content="{{ if .Params.featured_image }}article{{ else }}website{{ end }}" />
-{{ end }}
+
+    {{- with .Params.title_tag | default .Params.search_engine_optimization.title_tag -}}
+        <meta property="og:title" content="{{ . }}"/>
+    {{ else }}
+        <meta property="og:title" content="{{ .Params.Title }} - {{ $profile }}"/>
+    {{- end }}
+    {{ with .Params.meta_description | default .Params.search_engine_optimization.meta_description }}
+        <meta property="og:description" content="{{ . }}" />
+    {{ else }}
+        <meta property="og:description" content="{{ .Summary | truncate 170 }}" />
+    {{- end }}
+        <meta property="og:type" content="{{ if in .Permalink "blog" }}article{{ else }}website{{ end }}"/>
+{{- end -}}
 <!-- END OPEN GRAPH -->
 
 <!-- BEGIN SEO -->
-{{ if $.IsHome }}
+{{- if $.IsHome -}}
     <title>{{ $seo.title_tag }}</title>
     <meta name="description" content="{{ $seo.meta_description }}">
-{{ else if eq .RelPermalink "/contact-information/" }}
-    <title>{{ $pageConfigSeo.contact_page.search_engine_optimization.title_tag }}</title>
-    <meta name="description" content="{{ $pageConfigSeo.contact_page.search_engine_optimization.meta_description }}">
-{{ else if eq .RelPermalink "/bathroom-remodels/" }}
-    <title>{{ $pageConfigSeo.bathroom_remodels.search_engine_optimization.title_tag }}</title>
-    <meta name="description" content="{{ $pageConfigSeo.bathroom_remodels.search_engine_optimization.meta_description }}">
-{{ else if eq .RelPermalink "/cabinets-countertops-hardware/" }}
-    <title>{{ $pageConfigSeo.cabinets.search_engine_optimization.title_tag }}</title>
-    <meta name="description" content="{{ $pageConfigSeo.cabinets.search_engine_optimization.meta_description }}">
-{{ else if eq .RelPermalink "/plumbing-fixtures-appliances-lighting/" }}
-    <title>{{ $pageConfigSeo.fixtures.search_engine_optimization.title_tag }}</title>
-    <meta name="description" content="{{ $pageConfigSeo.fixtures.search_engine_optimization.meta_description }}">
-{{ else if eq .RelPermalink "/flooring/" }}
-    <title>{{ $pageConfigSeo.flooring.search_engine_optimization.title_tag }}</title>
-    <meta name="description" content="{{ $pageConfigSeo.flooring.search_engine_optimization.meta_description }}">
-{{ else if eq .RelPermalink "/kitchen-remodels/" }}
-    <title>{{ $pageConfigSeo.kitchen_remodel.search_engine_optimization.title_tag }}</title>
-    <meta name="description" content="{{ $pageConfigSeo.kitchen_remodel.search_engine_optimization.meta_description }}">
-{{ else if eq .RelPermalink "/tile-backsplash-showers-flooring/" }}
-    <title>{{ $pageConfigSeo.tile_work.search_engine_optimization.title_tag }}</title>
-    <meta name="description" content="{{ $pageConfigSeo.tile_work.search_engine_optimization.meta_description }}">
-{{ else if eq .RelPermalink "/blog/" }}
-    <title>{{ $pageConfigSeo.blog_page.title_tag }}</title>
-    <meta name="description" content="{{ $pageConfigSeo.blog_page.meta_description }}">
 {{ else }}
-    <title>{{ $.Params.search_engine_optimization.title_tag }}</title>
-    <meta name="description" content="{{ $.Params.search_engine_optimization.meta_description }}">
-    
-{{ end }}
+    {{ with .Params.title_tag | default .Params.search_engine_optimization.title_tag }}
+    <title>{{ . }}</title>
+    {{ else }}
+    <title>{{ .Params.Title }} - {{ $profile }}</title>
+    {{ end }}
+
+    {{ with .Params.meta_description | default .Params.search_engine_optimization.meta_description | default $bodyDesc  }}
+    <meta name="description" content="{{ . }}">
+    {{ else }}
+    <meta name="description" content="{{ .Summary | truncate 170 }}">
+    {{ end }}
+{{- end -}}

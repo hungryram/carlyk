@@ -6,9 +6,9 @@
           <a class="navbar-item" href="{{ .Site.BaseURL }}">
             {{ if .Site.Data.design.logo_and_title.logo }}
             {{ if $.IsHome }}
-              <img src="{{ .Site.Data.design.logo_and_title.logo | absURL }}" alt="">
+              <img src="{{ .Site.Data.design.logo_and_title.logo | absURL }}" alt="{{ .Site.Data.profile.company_name }}">
               {{ else }}
-              <img src="/uploads/blacklogo.png" alt="">
+              <img src="/uploads/blacklogo.png" alt="{{ .Site.Data.profile.company_name }}">
               {{ end }}
             {{ else }}
             <h1 class="title is-3" {{ if $.IsHome }}style="color:#fff;"{{ else }}style="color:#000"{{ end }}>{{ .Site.Data.design.logo_and_title.site_title }}</h1>
