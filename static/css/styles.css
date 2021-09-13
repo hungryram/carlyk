@@ -397,7 +397,7 @@ div.about__container {
     }
 }
 
-h1.main-title span {
+h2.main-title span {
     color: #5497df;
 }
 
@@ -538,8 +538,9 @@ div.panel__container a {
     right: 0;
  }
 
- footer.footer p {
-     color: #666;
+ footer.footer p,
+ footer.footer small {
+     color: #bebebe;
  }
 
  .footer-credit a {

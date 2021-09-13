@@ -1,6 +1,7 @@
 baseURL = "https://www.ckdesignskandb.com/"
 languageCode = "en-us"
 summaryLength = 20
+enableRobotsTXT = true
 [[menu.main]]
 name = "Flooring"
 parent = "Design & Remodeling Services"
