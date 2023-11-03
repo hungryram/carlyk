@@ -16,6 +16,10 @@
             <a href="tel:{{ .Site.Data.profile.primary_contact.email }}" class="has-text-white">{{ .Site.Data.profile.primary_contact.email }}</a>
           </div>
           <div class="column">
+            <p>Address</p>
+            <a href="https://maps.app.goo.gl/UuQoFpmnxDKNX7xZ9" target="_blank" class="has-text-white">{{ .Site.Data.profile.primary_contact.street_address }} {{ .Site.Data.profile.primary_contact.city }} {{ .Site.Data.profile.primary_contact.state }} {{ .Site.Data.profile.primary_contact.zip_code }}</a>
+          </div>
+          <div class="column">
             <p>Phone</p>
             <a href="tel:{{ .Site.Data.profile.primary_contact.phone }}" class="has-text-white">{{ .Site.Data.profile.primary_contact.phone }}</a>
           </div>
